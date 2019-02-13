@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/gui/icone">
+        <file>gui/icone/icone-activites-orange.png</file>
+        <file>gui/icone/Button-Delete.png</file>
+        <file>gui/icone/Index.png</file>
+    </qresource>
+</RCC>
