@@ -17,7 +17,7 @@ case "${DESTINATION}" in
         USER="user"
         HOST="ip/dns"
         PASSWORD="psw"
-	      ;;
+	;;
     2)
         USER="user"
         HOST="ip/dns"
@@ -38,7 +38,7 @@ then
     ssh -X -p ${PORT} ${USER}@${HOST}
     SSHPASS_RETURN=$?
     if [[ $SSHPASS_RETURN -ne 0 ]]; then
-      echo $(man sshpass |grep "$SSHPASS_RETURN      ")
+        echo $(man sshpass |grep "$SSHPASS_RETURN      ")
     fi
 else
     sshpass -p ${PASSWORD} ssh -X -p ${PORT} ${USER}@${HOST}
