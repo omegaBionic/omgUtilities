@@ -17,4 +17,28 @@ if $DEBUG; then
 fi
 
 ### main ###
-# TODO
+# first scan
+RET_SCAN_IPV4_FIRST=$(nmap -p $PORT $NETWORK_IPV4 --open | grep "Nmap scan report for" | awk '{print $5}')
+if $DEBUG; then
+    echo "RET_SCAN_IPV4_FIRST: ["
+    for IPV4 in $RET_SCAN_IPV4_FIRST
+    do
+        echo "\""$IPV4"\""
+    done
+    echo ']'
+fi
+
+# second scan
+read -p "Press key when you want lanch the second scan." CONTINUE
+RET_SCAN_IPV4_LAST=$(nmap -p $PORT $NETWORK_IPV4 --open | grep "Nmap scan report for" | awk '{print $5}')
+if $DEBUG; then
+    echo "RET_SCAN_IPV4_LAST: ["
+    for IPV4 in $RET_SCAN_IPV4_LAST
+    do
+        echo "\""$IPV4"\""
+    done
+    echo ']'
+fi
+
+# calculate if is in list
+#TODO
