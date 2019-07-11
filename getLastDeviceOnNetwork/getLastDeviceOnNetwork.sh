@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
-DEBUG=true
+DEBUG="true"
+PORT="22,80,443"
 
 ### arg(s) ###
 # get arg(s)
@@ -13,7 +13,7 @@ else
 fi
 # show arg(s) if $DEBUG == true
 if $DEBUG; then
-    echo "NETWORK_IPV4: "${NETWORK_IPV4}
+    echo "[Debug] NETWORK_IPV4: '"${NETWORK_IPV4}"'"
 fi
 
 ### main ###
