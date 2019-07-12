@@ -41,4 +41,18 @@ if $DEBUG; then
 fi
 
 # calculate if is in list
-#TODO
+for IPV4_LAST in $RET_SCAN_IPV4_LAST
+do
+    IS_IN_LIST="false"
+    for IPV4_FIRST in $RET_SCAN_IPV4_FIRST
+    do
+        if [ $IPV4_FIRST == $IPV4_LAST ]
+        then
+            IS_IN_LIST="true"
+        fi
+    done
+    if ! $IS_IN_LIST
+    then
+        echo "[Info] New IPV4 item is: '"${IPV4_LAST}"'"
+    fi
+done
