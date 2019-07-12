@@ -8,7 +8,10 @@ PORT="22,80,443"
 if [ $# -eq 1 ]; then
     NETWORK_IPV4=$1
 else
-    /bin/echo "In first parameter enter your network like that \"192.168.1.*\""
+    /bin/echo "In first parameter enter the network you want to scan like that :"
+    /bin/echo "  - \"192.168.1.*\" for scan all ipv4 on 192.168.1.0"
+    /bin/echo "  - \"192.168.1.1-10\" for scan all ipv4 between 1 and 10"
+    /bin/echo "After wait for the first scan, connect your device on network and press key for launch second scan and enjoy!"
     read -p "Input your network: " NETWORK_IPV4 
 fi
 # show arg(s) if $DEBUG == true
