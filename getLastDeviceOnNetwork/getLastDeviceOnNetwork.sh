@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEBUG="true"
+DEBUG="false"
 PORT="22,80,443"
 
 ### arg(s) ###
