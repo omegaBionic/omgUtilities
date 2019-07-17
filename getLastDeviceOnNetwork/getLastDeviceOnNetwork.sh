@@ -20,10 +20,11 @@ if $DEBUG; then
 fi
 
 ### main ###
+echo "[Info] Program launched"
 # first scan
 RET_SCAN_IPV4_FIRST=$(nmap -p $PORT $NETWORK_IPV4 --open | grep "Nmap scan report for" | awk '{print $5}')
 if $DEBUG; then
-    echo "RET_SCAN_IPV4_FIRST: ["
+    echo "[Debug] RET_SCAN_IPV4_FIRST: ["
     for IPV4 in $RET_SCAN_IPV4_FIRST
     do
         echo "\""$IPV4"\""
@@ -32,10 +33,10 @@ if $DEBUG; then
 fi
 
 # second scan
-read -p "Press key when you want lanch the second scan." CONTINUE
+read -p "[Info] Press key when you want launch the second scan." CONTINUE
 RET_SCAN_IPV4_LAST=$(nmap -p $PORT $NETWORK_IPV4 --open | grep "Nmap scan report for" | awk '{print $5}')
 if $DEBUG; then
-    echo "RET_SCAN_IPV4_LAST: ["
+    echo "[Debug] RET_SCAN_IPV4_LAST: ["
     for IPV4 in $RET_SCAN_IPV4_LAST
     do
         echo "\""$IPV4"\""
@@ -59,3 +60,5 @@ do
         echo "[Info] New IPV4 item is: '"${IPV4_LAST}"'"
     fi
 done
+
+echo "[Info] End of program."
