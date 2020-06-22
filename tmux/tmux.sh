@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SESSION_NAME="main"
+SESSION_NAME="main_"$(date +"%Y%m%d-%H%M")
 
 
 # Window 0
