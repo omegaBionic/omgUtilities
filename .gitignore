@@ -1,0 +1,10 @@
+
+
+# xyCapture
+build-xyCapture-*
+xyCapture/Makefile
+xyCapture/mainwindow.o
+xyCapture/qrc_resources.cpp
+xyCapture/xyCapture.i64
+xyCapture/xyCapture.pro.user
+
